@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uwagi o Formularzach HTML</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Uwagi o Formularzach HTML</h1>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Mocne strony i zalety HTML5</h2>
+                <p>Formularze w HTML5, wzbogacone o nowe typy pól (<kbd>email</kbd>, <kbd>date</kbd>, <kbd>number</kbd>, <kbd>color</kbd>) oraz atrybuty walidacji (<kbd>required</kbd>, <kbd>min</kbd>, <kbd>max</kbd>, <kbd>maxlength</kbd>), stanowią solidną podstawę interakcji z użytkownikiem.</p>
+                
+                <p>Warto je stosować, gdy:</p>
+                <ul>
+                    <li>Potrzebna jest podstawowa walidacja danych (np. sprawdzenie, czy pole email zawiera `@`).</li>
+                    <li>Wymagana jest dobra dostępność (Accessibility) – natywne elementy są zazwyczaj lepiej zoptymalizowane pod kątem czytników ekranu.</li>
+                    <li>Chcemy ograniczyć zależność od JavaScript dla podstawowych operacji, zapewniając działanie nawet przy jego wyłączeniu.</li>
+                    <li>Formularz jest prosty i służy do standardowego zbierania danych (np. logowanie, kontakt).</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Wady i Ograniczenia</h2>
+                <p>Mimo postępów, formularze HTML bez JavaScript mają swoje wady. Komunikaty walidacyjne są zdefiniowane przez przeglądarkę i trudne do ostylowania, a zaawansowana, dynamiczna walidacja (np. sprawdzanie dostępności nazwy użytkownika w bazie danych) jest niemożliwa.</p>
+
+                <p>Nie warto ich stosować, gdy:</p>
+                <ol>
+                    <li>Projekt wymaga niestandardowego wyglądu natywnych kontrolek (np. polach wyboru, suwaków) i musi być on identyczny we wszystkich przeglądarkach.</li>
+                    <li>Wymagana jest dynamiczna interakcja z polami (np. pole odblokowuje się po wybraniu opcji w innym polu).</li>
+                    <li>Potrzebna jest asynchroniczna komunikacja z serwerem (np. wysłanie formularza bez przeładowania strony).</li>
+                </ol>
+            </section>
+        </article>
+    </main>
+
+    <nav>
+        <a href="index.html" class="back-link">Powrót do strony głównej</a>
+    </nav>
+</body>
+</html>
