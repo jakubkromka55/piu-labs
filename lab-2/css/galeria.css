@@ -1,0 +1,80 @@
+:root {
+    --gap: 1.5rem;
+    --radius: 14px;
+    --text: #222;
+    --shadow: rgba(0,0,0,0.15);
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: #fff;
+    color: var(--text);
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.gallery {
+    display: grid;
+    gap: var(--gap);
+}
+
+@media (min-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+figure img {
+    width: 100%;
+    border-radius: var(--radius);
+    transition: 0.3s ease;
+    box-shadow: 0 4px 14px var(--shadow);
+}
+
+figure img:hover {
+    transform: scale(1.025);
+    box-shadow: 0 8px 26px rgba(0,0,0,0.25);
+}
+
+figcaption {
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+@media (max-width: 799px) {
+    img {
+        content: attr(data-src-500);
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+    img {
+        content: attr(data-src-1000);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+    img {
+        content: attr(data-src-500);
+    }
+}
+
+@media (min-width: 1600px) {
+    img {
+        content: attr(data-src-1000);
+    }
+}
